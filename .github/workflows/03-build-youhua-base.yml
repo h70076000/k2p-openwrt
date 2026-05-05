@@ -68,6 +68,7 @@ jobs:
         cd openwrt-youhua
         BRANCH="openwrt-${{ github.event.inputs.version }}"
         echo "src-git packages https://git.openwrt.org/feed/packages.git;$BRANCH" > feeds.conf
+        echo "src-git hxzn https://github.com/h70076000/openwrt-packages" > feeds.conf
         echo "src-git luci https://git.openwrt.org/project/luci.git;$BRANCH" >> feeds.conf
         echo "src-git routing https://git.openwrt.org/feed/routing.git;$BRANCH" >> feeds.conf
         ./scripts/feeds update -a
