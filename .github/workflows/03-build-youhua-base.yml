@@ -16,7 +16,6 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
   CONFIG_FILE: configs/youhua/base.config
-  DIY_P4_SH: diy-part4.sh
   TARGET: ramips
   SUBTARGET: mt7621
   PROFILE: youhua_wr1200js
