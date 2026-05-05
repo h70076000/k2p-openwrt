@@ -16,6 +16,7 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
   CONFIG_FILE: configs/youhua/base.config
+  DIY_P4_SH: diy-part4.sh
   TARGET: ramips
   SUBTARGET: mt7621
   PROFILE: youhua_wr1200js
@@ -68,7 +69,6 @@ jobs:
         BRANCH="openwrt-${{ github.event.inputs.version }}"
         echo "src-git packages https://git.openwrt.org/feed/packages.git;$BRANCH" > feeds.conf
         echo "src-git luci https://git.openwrt.org/project/luci.git;$BRANCH" >> feeds.conf
-        echo "src-git hxzn https://github.com/h70076000/hxzn-package" > feeds.conf
         echo "src-git routing https://git.openwrt.org/feed/routing.git;$BRANCH" >> feeds.conf
         ./scripts/feeds update -a
         ./scripts/feeds install -a
